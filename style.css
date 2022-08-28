@@ -1,10 +1,15 @@
-
+/* Start Body Styling */
 body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     
 }
+/* End Body Styling */
+
+
+/* Start Main Nav Styling */
+
 .navbar {
     z-index: 3;
 }
@@ -18,11 +23,37 @@ body {
     color: white;    
     margin-left: 35px;
 }
+.dropdown button {
+    font-size: 22px;
+    color: white;
+}
+.dropdownLi {
+    margin-left: 0;
+}
+.dropdown button:hover {
+    color: white;
+    border: transparent;
+}
+
+.navbar .nav-item a:hover  {
+    color: rgb(255, 255, 255);
+}
+.dropdown {
+    margin-left: 0px;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+}
 @media screen and (min-width:1px) and (max-width:420px) {
     .navbar .nav-item .activeLink  {   
         margin-left: 10px;
     }
 }
+/* End Main Nav Styling */
+
+/* Start Main Section Styling */
+
 .MainBg {
     width: 100vw;
     height: 100vh;
@@ -56,6 +87,9 @@ body {
     display: flex;
     justify-content: center;
 }
+/* End Main Section Styling */
+
+/* Start Footer Section Styling */
 .Mfooter  {
     position: fixed;
     bottom: 0;
@@ -116,7 +150,9 @@ label:focus,
     -webkit-appearance:none;
     box-shadow: none !important;
 }
+/* End Footer Section Styling */
 
+/* Start SideBar Section Styling */
 .OpenSideBar {
     position: fixed;
     top: 3%;
@@ -144,7 +180,11 @@ label:focus,
 
     
 }
-@media screen and (min-width:1px) and (max-width:900px) {
+@media screen and (min-width:460px) and (max-width:900px) {
+    .Rightnav {
+        width:50%;}
+}
+@media screen and (min-width:1px) and (max-width:460px) {
     .Rightnav {
         width: 100%;}
 }
@@ -204,3 +244,31 @@ label:focus,
     align-items: flex-start;
     width: 100%;
 }
+/* End SideBar Section Styling */
+
+/* Start Search Styling */
+.SearchForm input {
+    border-radius: 10px;
+    height: 40px;
+    padding: 20px;
+    outline: none;    
+}
+#result {
+    cursor: pointer;
+    background-color: rgba(204, 204, 204, 0.521);
+    border-radius: 15px;
+    
+  }
+  #result ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  #result ul li {
+    padding: 5px 0;
+    padding-left: 20px;
+  }
+  #result ul li:hover {
+    background: rgb(168, 168, 168);
+  }
+/* End Search Styling */

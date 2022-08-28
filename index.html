@@ -52,21 +52,21 @@
       
         <!-- Background image -->
         <div
-          class="p-5 text-center bg-transparent MainBg"
+          class="p-5 ps-md-5 pe-md-5 ps-3 pe-3 text-center bg-transparent MainBg"
           style="
             width: 100vw;
             background-repeat: no-repeat;
             margin-top: 0px;
           "
         >
-          <div class="mask" style="background-color: transparent;">
-            <div class="d-flex justify-content-center align-items-center h-100">
-              <div class="text-white">
+          <div class="mask " style="background-color: transparent;">
+            <div class="d-flex mt-5 col-9 col-md-5 ms-auto me-auto justify-content-center align-items-center text-start h-100">
+              <div class="text-white col-12">
                 <h1 class="mb-3">Heading</h1>
                 <h4 class="mb-3">Subheading</h4>
-                <a class="btn btn-outline-light btn-lg" href="#!" role="button"
-                >Call to action</a
-                >
+                <form class="SearchForm  " autocomplete="off"><input class="col-12" type="text" placeholder="Search Here..." name="q" id="q" onKeyUp="showResults(this.value)" />
+                  <div id="result" class="col-12 ms-auto me-auto" ></div>
+                  </form>
               </div>
             </div>
           </div>
