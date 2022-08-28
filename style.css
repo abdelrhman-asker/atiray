@@ -49,6 +49,17 @@ body {
     .navbar .nav-item .activeLink  {   
         margin-left: 10px;
     }
+    .dropdown-menu {
+        max-width: 100px;
+        min-width: 140px;
+        margin-left: -50px;
+    }
+    .dropdown-item {
+        font-size: 12px;
+        padding-right: 0;
+        width: fit-content;
+        margin-right: 0;
+    }
 }
 /* End Main Nav Styling */
 
@@ -83,6 +94,7 @@ body {
 .dropdown {
     margin-left: 0px;
 }
+.dropdown-menu ul li a 
 .navbar-nav {
     display: flex;
     justify-content: center;
