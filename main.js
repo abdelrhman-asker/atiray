@@ -62,7 +62,7 @@ inputBox.onkeyup = (e)=>{
     let emptyArray = [];
     if(userData){
         icon.onclick = ()=>{
-            webLink = "https://atiray.com/search?engine=1&q=" ;
+            webLink = "https://atiray.com/search?engine=1&q=" + userData;
             linkTag.setAttribute("href", webLink);
             console.log(webLink);
             linkTag.click();
@@ -91,7 +91,7 @@ function select(element){
     let selectData = element.textContent;
     inputBox.value = selectData;
     icon.onclick = ()=>{
-        webLink = "https://atiray.com/search?engine=1&q=" ;
+        webLink = "https://atiray.com/search?engine=1&q=" + selectData;
         linkTag.setAttribute("href", webLink);
         linkTag.click();
     }
@@ -121,3 +121,4 @@ input.addEventListener("keypress", function(event) {
     document.getElementById("iconSearch").click();
   }
 });
+
