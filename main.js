@@ -8,10 +8,13 @@ function randombg(){
 
   function openSidebar() {
     document.querySelector(".Rightnav").style.display = "flex"
+    document.querySelector(".transparentDiv").style.display = "block"
     document.querySelector(".Based").style.marginRight = "20%"
   }
   function RemoveNavS() {
     document.querySelector(".Rightnav").style.display = "none"
+    document.querySelector(".transparentDiv").style.display = "none"
+
     document.querySelector(".Based").style.marginRight = "0%"
 
   }

@@ -127,10 +127,19 @@ label:focus,
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
-    z-index: 4;
+    z-index: 9999;
     padding-top: 4%;
 
     
+}
+.transparentDiv {
+    width: 80%;
+    height: 100vh;
+    z-index: 1;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 .MainIcon {
     color: black;
