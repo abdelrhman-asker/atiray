@@ -19,36 +19,105 @@ function randombg(){
   }
 
 
-var search_terms = ['apple', 'apple watch', 'apple macbook', 'apple macbook pro', 'iphone', 'iphone 12', 'google', 'query', 'save', 'door', 'playstation', 'laptop', 'zoomin', 'zoomout', 'inside', 'outSide', 'bandicam', 'noor', 'wrap', 'nowrap', 'repeat', 'cars', 'tree'];
+  let suggestions = [
+    "Channel",
+    "CodingLab",
+    "CodingNepal",
+    "YouTube",
+    "YouTuber",
+    "YouTube Channel",
+    "Blogger",
+    "Bollywood",
+    "Vlogger",
+    "Vechiles",
+    "Facebook",
+    "Freelancer",
+    "Facebook Page",
+    "Designer",
+    "Developer",
+    "Web Designer",
+    "Web Developer",
+    "Login Form in HTML & CSS",
+    "How to learn HTML & CSS",
+    "How to learn JavaScript",
+    "How to became Freelancer",
+    "How to became Web Designer",
+    "How to start Gaming Channel",
+    "How to start YouTube Channel",
+    "What does HTML stands for?",
+    "What does CSS stands for?",
+];
 
-function autocompleteMatch(input) {
-  if (input == '') {
-    document.querySelector("#result").style.height= "0px"
+// getting all required elements
+const searchWrapper = document.querySelector(".search-input");
+const inputBox = searchWrapper.querySelector("input");
+const suggBox = searchWrapper.querySelector(".autocom-box");
+const icon = searchWrapper.querySelector(".icon");
+let linkTag = searchWrapper.querySelector("a");
+let webLink;
 
-    return [];
-
-  }
-  var reg = new RegExp(input)
-  return search_terms.filter(function(term) {
-	  if (term.match(reg)) {
-      document.querySelector("#result").style.height= "210px"
-      document.querySelector("#result").style.overflowY= "hidden"
-
-
-  	  return term;
-	  } 
-  });
+// if user press any key and release
+inputBox.onkeyup = (e)=>{
+    let userData = e.target.value; //user enetered data
+    let emptyArray = [];
+    if(userData){
+        icon.onclick = ()=>{
+            webLink = "https://atiray.com/search?engine=1&q=" ;
+            linkTag.setAttribute("href", webLink);
+            console.log(webLink);
+            linkTag.click();
+        }
+        emptyArray = suggestions.filter((data)=>{
+            //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase()); 
+        });
+        emptyArray = emptyArray.map((data)=>{
+            // passing return data inside li tag
+            return data = '<li>'+ data +'</li>';
+        });
+        searchWrapper.classList.add("active"); //show autocomplete box
+        showSuggestions(emptyArray);
+        let allList = suggBox.querySelectorAll("li");
+        for (let i = 0; i < allList.length; i++) {
+            //adding onclick attribute in all li tag
+            allList[i].setAttribute("onclick", "select(this)");
+        }
+    }else{
+        searchWrapper.classList.remove("active"); //hide autocomplete box
+    }
 }
 
-function showResults(val) {
-  res = document.getElementById("result");
-  res.innerHTML = '';
-  let list = '';
-  let terms = autocompleteMatch(val);
-  for (i=0; i<terms.length; i++) {
-    list += '<li>' + terms[i] + '</li>';
-    
-  }
-  res.innerHTML = '<ul>' + list + '</ul>';
-
+function select(element){
+    let selectData = element.textContent;
+    inputBox.value = selectData;
+    icon.onclick = ()=>{
+        webLink = "https://atiray.com/search?engine=1&q=" ;
+        linkTag.setAttribute("href", webLink);
+        linkTag.click();
+    }
+    searchWrapper.classList.remove("active");
 }
+
+function showSuggestions(list){
+    let listData;
+    if(!list.length){
+        userValue = inputBox.value;
+        listData = '<li>'+ userValue +'</li>';
+    }else{
+        listData = list.join('');
+    }
+    suggBox.innerHTML = listData;
+}
+// Get the input field
+var input = document.getElementById("myInput");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("iconSearch").click();
+  }
+});
