@@ -23,13 +23,20 @@ var search_terms = ['apple', 'apple watch', 'apple macbook', 'apple macbook pro'
 
 function autocompleteMatch(input) {
   if (input == '') {
+    document.querySelector("#result").style.height= "0px"
+
     return [];
+
   }
   var reg = new RegExp(input)
   return search_terms.filter(function(term) {
 	  if (term.match(reg)) {
+      document.querySelector("#result").style.height= "210px"
+      document.querySelector("#result").style.overflowY= "hidden"
+
+
   	  return term;
-	  }
+	  } 
   });
 }
 
@@ -40,8 +47,8 @@ function showResults(val) {
   let terms = autocompleteMatch(val);
   for (i=0; i<terms.length; i++) {
     list += '<li>' + terms[i] + '</li>';
-    document.querySelector("#result").style.height= "210px"
-    document.querySelector("#result").style.overflowY= "hidden"
+    
   }
   res.innerHTML = '<ul>' + list + '</ul>';
+
 }
