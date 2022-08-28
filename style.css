@@ -10,11 +10,18 @@ body {
 }
 .navbar .nav-item .nav-link  {
     color: rgb(194, 194, 194);
-    margin-left: 35px;
+}
+.navbar .nav-item   {
+    margin-left: 10px;
 }
 .navbar .nav-item .activeLink  {
     color: white;    
     margin-left: 35px;
+}
+@media screen and (min-width:1px) and (max-width:420px) {
+    .navbar .nav-item .activeLink  {   
+        margin-left: 10px;
+    }
 }
 .MainBg {
     width: 100vw;
@@ -28,8 +35,11 @@ body {
     margin-top: auto;
 }
 .dropdown button {
-    font-size: 18px;
+    font-size: 22px;
     color: white;
+}
+.dropdownLi {
+    margin-left: 0;
 }
 .dropdown button:hover {
     color: white;
@@ -40,7 +50,7 @@ body {
     color: rgb(255, 255, 255);
 }
 .dropdown {
-    margin-left: 5px;
+    margin-left: 0px;
 }
 .navbar-nav {
     display: flex;
@@ -114,8 +124,6 @@ label:focus,
 
 }
 .Rightnav {
-    transition-duration: 2s;
-
     background-color: white;
     position: fixed;
     top: 0;
@@ -131,6 +139,10 @@ label:focus,
     padding-top: 4%;
 
     
+}
+@media screen and (min-width:1px) and (max-width:900px) {
+    .Rightnav {
+        width: 100%;}
 }
 .transparentDiv {
     width: 80%;
