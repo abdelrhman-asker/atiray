@@ -1,0 +1,181 @@
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+}
+.navbar {
+    z-index: 3;
+}
+.navbar .nav-item .nav-link  {
+    color: rgb(194, 194, 194);
+    margin-left: 35px;
+}
+.navbar .nav-item .activeLink  {
+    color: white;    
+    margin-left: 35px;
+}
+.MainBg {
+    width: 100vw;
+    height: 95vh;
+    background-size: cover;
+}
+.mask {
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    margin-top: auto;
+}
+.dropdown button {
+    font-size: 18px;
+    color: white;
+}
+.dropdown button:hover {
+    color: white;
+    border: transparent;
+}
+
+.navbar .nav-item a:hover  {
+    color: rgb(255, 255, 255);
+}
+.dropdown {
+    margin-left: 5px;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+}
+.Mfooter  {
+    height: 5.1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    
+}
+.footerLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+}
+footer div a  {
+    color: rgb(183, 183, 183);
+    text-decoration: none;
+}
+footer div a:hover  {
+    color: rgb(183, 183, 183);
+}
+.Based {
+    color: rgb(183, 183, 183);
+    text-align: end;
+    transition-duration: 1s;
+
+
+}
+@media screen and (min-width:1px) and (max-width:420px) {
+    .Based{
+        font-size: 12px;
+    }
+    footer div a  {
+        font-size: 14px;
+    }
+}
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+.OpenSideBar {
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+}
+.Rightnav {
+    transition-duration: 2s;
+
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    display: none ;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    z-index: 4;
+    padding-top: 4%;
+
+    
+}
+.MainIcon {
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+    align-self: flex-end;
+    cursor: pointer;
+    top: 3%;
+    right: 3%;
+    position: fixed;
+    transition-duration: 2s;
+
+}
+
+.Rightnav a {
+    margin: 2px 0;
+    padding: 7px;
+}
+.Rightnav a:hover {
+    background-color: rgba(235, 235, 235, 0.464);
+    border-radius: 10px;
+    
+}
+.Rightnav a {
+   text-decoration: none;
+   color: black;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-start;
+   width: 100%;
+}
+.Rightnav  span {
+    opacity: 0.7;
+    font-size: 11px;
+}
+.Rightnav   h3 {
+    opacity: 1;
+    font-size: 16px;
+}
+.RightnavFlexOFLex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
