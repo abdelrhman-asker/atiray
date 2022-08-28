@@ -122,3 +122,6 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
+function select() {
+  document.getElementById("iconSearch").click();
+}
