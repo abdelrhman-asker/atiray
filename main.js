@@ -1,8 +1,8 @@
 function randombg(){
     var random= Math.floor(Math.random() * 3) + 0;
-    var bigSize = ["url('https://atiray.com/site/backgrounds/yosemite-1590012_1920.jpg')",
-                   "url('https://atiray.com/site/backgrounds/dunes-4033821_1920.jpg')",
-                   "url('https://atiray.com/site/backgrounds/hummingbird-2139278_1920.jpg')",];
+    var bigSize = ["url('../pics/dunes-4033821_1920.jpg')",
+                   "url('../pics/hummingbird-2139278_1920.jpg')",
+                   "url('../pics/yosemite-1590012_1920.jpg')",];
     document.querySelector(".MainBg").style.backgroundImage=bigSize[random];
   }
 
@@ -62,7 +62,7 @@ inputBox.onkeyup = (e)=>{
     let emptyArray = [];
     if(userData){
         icon.onclick = ()=>{
-            webLink = "https://atiray.com/search?engine=1&q=" + userData;
+            webLink = "https://google.com/search?engine=1&q=" + userData;
             linkTag.setAttribute("href", webLink);
             console.log(webLink);
             linkTag.click();
